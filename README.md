@@ -2,11 +2,12 @@
 ##### Simple solutions to the FizzBuzz problem in PHP with **no** "if" repetition.
 
 The variables used in these scripts will remain consistent:
-| Variable       | Name |  Description            |
-|:-------------:|:-----:|:-----------------------|
-|      $n       | Number | Holds the current number|
-|      $s       |  Solution | 0 if no FizzBuzz found, otherwise >0|
-|      $r       | Result | String to be returned
+
+| Variable      | Name      |  Description                         |
+|:-------------:|:---------:|:-------------------------------------|
+|      $n       | Number    | Holds the current number             |
+|      $s       |  Solution | 0 if no FizzBuzz found, otherwise >0 |
+|      $r       | Result    | String to be returned                |
 
 ##### FizzBuzz.php
 The original
