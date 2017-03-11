@@ -7,6 +7,8 @@ The variables used in these scripts will remain consistent:
 |:-------------:|:---------:|:-------------------------------------|
 |      $n       | Number    | Holds the current number             |
 |      $r       | Result    | String to be returned                |
+|      $m3      | Mod 3     | If divisible by 3, returns null      |
+|      $m5      | Mod 5     | If divisible by 5, returns null      |
 
 ##### FizzBuzz.php
 The original
@@ -24,6 +26,27 @@ for ($n=1; $n<=100; $n++){
 		$r=$n;
 	}
 	echo $r.'<br>';
+}
+?>
+```
+
+#### FizzBuzzSmaller.php
+A variation of the original FizzBuzz PHP, made smaller by:
+- Declaring the Modulus values up front
+- Replacing "if" with ternary operators
+- Removing some whitespace
+- Changing the test from <=100 to <101 (saves 1 character!)
+
+```php
+<?php
+for ($n=1; $n<101; $n++){
+	$m3=$n%3;             // store the tests to determine modulus of 3 and 5
+	$m5=$n%5;
+	$r=!$m3?'Fizz':'';    // replace if clause with ternary operators
+	$r.=!$m5?'Buzz':'';
+	$r.=!$r?$n:'';        // if $r is empty, not divisible by either - return number instead
+	echo $r.'<br>';
+	$r='';                // clear $r
 }
 ?>
 ```
